@@ -19,11 +19,15 @@ html {
 
 body {
   text-align: center;
-  overflow: hidden; 
 }
 
 img {
   width: 100%;
+  display: inline-block;
+}
+
+img:nth-child(even) {
+  display: none;
 }
 
 @media only screen and (min-width: 25em) {
@@ -31,6 +35,11 @@ img {
   img {
     display: inline-block;
     width: 49%;
+    overflow: hidden;
+  }
+
+  img:nth-child(even) {
+    display: inline-block;
   }
 
 }
@@ -38,8 +47,13 @@ img {
 @media only screen and (min-width: 38em) {
 
   img {
-  display: inline-block;
-  width: 32%
+    display: inline-block;
+    width: 32%;
+  }
+
+  img:first-child {
+    display: none;
+    overflow: hidden;
   }
 
 }
@@ -49,6 +63,10 @@ img {
   img {
     display: inline-block;
     width: 24%;
+  }
+
+  img:first-child {
+    display: inline-block;
   }
 
 }
